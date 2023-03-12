@@ -30,7 +30,7 @@ public class Menu {
         System.out.println("🥤 음료");
         for (Product product : products) {
             if (product instanceof Drink) {
-                printEachMenu(product,printPrice);
+                printEachMenu(product, printPrice);
             }
         }
         System.out.println();
@@ -40,7 +40,7 @@ public class Menu {
         System.out.println("🍟 사이드");
         for (Product product : products) {
             if (product instanceof Side) {
-                printEachMenu(product,printPrice);
+                printEachMenu(product, printPrice);
             }
         }
         System.out.println();
@@ -50,14 +50,14 @@ public class Menu {
         System.out.println("🍔 햄버거");
         for (Product product : products) {
             if (product instanceof Hamburger) {
-                printEachMenu(product,printPrice);
+                printEachMenu(product, printPrice);
             }
         }
         System.out.println();
     }
 
-    private static void printEachMenu(Product product,boolean printPrice) {
-        if(printPrice) System.out.printf("   (%d) %s %5dKcal %5d원\n", product.getId(), product.getName(),
+    private static void printEachMenu(Product product, boolean printPrice) {
+        if (printPrice) System.out.printf("   (%d) %s %5dKcal %5d원\n", product.getId(), product.getName(),
                 product.getKcal(),
                 product.getPrice());
         else System.out.printf("   (%d) %s %5dKcal\n", product.getId(), product.getName(),

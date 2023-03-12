@@ -12,10 +12,10 @@ public class Hamburger extends Product {
         this.burgerSetPrice = burgerSetPrice;
     }
 
-    public Hamburger(Hamburger hamburger){
+    public Hamburger(Hamburger hamburger) {
         super(hamburger.getName(), hamburger.getPrice(), hamburger.getKcal());
-        this.isBurgerSet= hamburger.isBurgerSet();
-        this.burgerSetPrice= hamburger.getBurgerSetPrice();
+        this.isBurgerSet = hamburger.isBurgerSet();
+        this.burgerSetPrice = hamburger.getBurgerSetPrice();
     }
 
     public boolean isBurgerSet() {

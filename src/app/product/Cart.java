@@ -1,8 +1,5 @@
 package app.product;
 
-import app.product.Menu;
-import app.product.Product;
-import app.product.ProductRepository;
 import app.product.subproduct.BurgerSet;
 import app.product.subproduct.Drink;
 import app.product.subproduct.Hamburger;

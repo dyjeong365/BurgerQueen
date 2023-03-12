@@ -1,11 +1,7 @@
 package app.product;
 
 import app.discount.Discount;
-import app.discount.discountCondition.CozDiscountCondition;
 import app.discount.discountCondition.DiscountCondition;
-import app.discount.discountCondition.KidDiscountCondition;
-import app.discount.discountPolicy.FixedAmountDiscountPolicy;
-import app.discount.discountPolicy.FixedRateDiscountPolicy;
 
 public class Order {
     private Cart cart;
@@ -21,9 +17,7 @@ public class Order {
     public void makeOrder() {
 
         int totalPrice = cart.calculateTotalPrice();
-
         int finalPrice = discount.discount(totalPrice);
-
 
         System.out.println("[📣] 주문이 완료되었습니다. ");
         System.out.println("[📣] 주문 내역은 다음과 같습니다. ");

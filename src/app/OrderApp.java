@@ -1,11 +1,5 @@
 package app;
 
-import app.discount.Discount;
-import app.discount.discountCondition.CozDiscountCondition;
-import app.discount.discountCondition.DiscountCondition;
-import app.discount.discountCondition.KidDiscountCondition;
-import app.discount.discountPolicy.FixedAmountDiscountPolicy;
-import app.discount.discountPolicy.FixedRateDiscountPolicy;
 import app.product.*;
 
 import java.util.Scanner;
@@ -39,7 +33,8 @@ public class OrderApp {
                 int menuNumber = Integer.parseInt(input);
 
                 if (menuNumber == 0) cart.printCart();
-                else if (menuNumber >= 1 && menuNumber <= productRepository.getAllProducts().length) cart.addToCart(menuNumber);
+                else if (menuNumber >= 1 && menuNumber <= productRepository.getAllProducts().length)
+                    cart.addToCart(menuNumber);
             }
         }
     }

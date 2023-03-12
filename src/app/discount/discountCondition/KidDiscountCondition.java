@@ -5,7 +5,7 @@ import app.discount.discountPolicy.FixedAmountDiscountPolicy;
 
 import java.util.Scanner;
 
-public class KidDiscountCondition implements DiscountCondition{
+public class KidDiscountCondition implements DiscountCondition {
     private boolean isSatisfied;
     private DiscountPolicy discountPolicy;
 

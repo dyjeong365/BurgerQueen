@@ -12,19 +12,20 @@ import app.product.Order;
 import app.product.ProductRepository;
 
 public class AppConfigurer {
-    private Cart cart = new Cart(productRepository(),menu());
+    private Cart cart = new Cart(productRepository(), menu());
 
-    public ProductRepository productRepository(){
+    public ProductRepository productRepository() {
         return new ProductRepository();
     }
 
-    public Menu menu(){
+    public Menu menu() {
         return new Menu(productRepository().getAllProducts());
     }
 
-    public Cart cart(){
+    public Cart cart() {
         return cart;
     }
+
     public Discount discount() {
         return new Discount(
                 new DiscountCondition[]{
@@ -33,7 +34,8 @@ public class AppConfigurer {
                 }
         );
     }
-        public Order order(){
-            return new Order(cart(),discount());
-        }
+
+    public Order order() {
+        return new Order(cart(), discount());
     }
+}
